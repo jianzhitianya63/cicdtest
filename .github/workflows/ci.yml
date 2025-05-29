@@ -1,0 +1,8 @@
+name: CI/CD Pipeline  # 工作流程的名称，会显示在 GitHub Actions 选项卡中
+
+on: # 定义触发工作流程的事件
+  push: # 当有代码推送到特定分支时触发
+    branches: [ main, develop ] # 例如，推送到 main 或 develop 分支
+  pull_request: # 当有拉取请求到特定分支时触发
+    branches: [ main ] # 例如，拉取请求到 main 分支
+  workflow_dispatch: # 允许手动触发此工作流程
