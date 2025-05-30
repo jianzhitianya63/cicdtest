@@ -45,7 +45,7 @@ jobs:
           push: true # 推送镜像
           tags: |
             ${{ env.DOCKER_IMAGE_NAME }}:latest
-            ${{ env.DOCKER_IMAGE_NAME }}:${{ github.sha }} # 使用 commit SHA 作为版本标签
+            ${{ env.DOCKER_IMAGE_NAME }}:${{ github.sha }}
           # 如果使用 GHCR, 将 tags 改为:
           # tags: |
           #   ${{ env.DOCKER_IMAGE_NAME_GHCR }}:latest
