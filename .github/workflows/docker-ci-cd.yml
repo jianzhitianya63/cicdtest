@@ -59,6 +59,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Debug SSH key
+        run: |
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | head -n 2
       - name: Deploy to server via SSH
         uses: appleboy/ssh-action@v1.0.3 # 使用一个流行的 SSH Action
         with:
