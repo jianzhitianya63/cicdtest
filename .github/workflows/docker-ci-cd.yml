@@ -63,7 +63,7 @@ jobs:
         run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" | head -n 2
       - name: Deploy to server via SSH
-        uses: appleboy/ssh-action@v1.0.3 # 使用一个流行的 SSH Action
+        uses: appleboy/ssh-action@v1.0.3 # 使用一个流行的 SSH Action hh
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
