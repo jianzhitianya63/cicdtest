@@ -71,8 +71,6 @@ jobs:
           port: ${{ secrets.SSH_PORT }} # 通常是 22
           debug: true
           script: |
-            echo "Running on $(hostname) as $(whoami)"
-            echo "Image: ${{ env.DOCKER_IMAGE_NAME }}:latest"
             # 拉取最新的 Docker 镜像
             docker pull ${{ env.DOCKER_IMAGE_NAME }}:latest
             # 如果使用 GHCR, 则为:
