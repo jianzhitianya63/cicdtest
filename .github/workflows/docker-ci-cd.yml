@@ -66,7 +66,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }} # 通常是 22
-          script: |
+          script:
             # 拉取最新的 Docker 镜像
             docker pull ${{ env.DOCKER_IMAGE_NAME }}:latest
             # 如果使用 GHCR, 则为:
